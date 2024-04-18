@@ -13,7 +13,7 @@ class itemController {
     const item_id = parseInt(req.query.i);
     
     try {
-      if(username == null || username.length < 1) {
+      if(item_id == null || item_id == 0) {
         throw new RBXException("E_FIELDEMPTY");
       }
       
