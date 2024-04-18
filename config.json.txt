@@ -7,7 +7,6 @@
   "port": 3000,
   "cdnDir": "../cdn",
   "groupId": <YOUR_GROUP_ID>,
-  "cookie": "<YOUR_BOT_COOKIE>",
   "resp": {
     "message": null,
     "data": null
