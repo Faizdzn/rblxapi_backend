@@ -6,7 +6,7 @@ const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../config.jso
 let RBX = require("../lib/obfuscated_rblx.js");
 const RBXException = require("../lib/error.js");
 
-RBX = new RBX(config.groupId, config.cdnDir)
+RBX = new RBX(cconfig.cdnDir)
 
 class itemController {
   async getItem3D(req, res, next) {

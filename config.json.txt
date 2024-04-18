@@ -6,7 +6,6 @@
   ],
   "port": 3000,
   "cdnDir": "../cdn",
-  "groupId": <YOUR_GROUP_ID>,
   "resp": {
     "message": null,
     "data": null
