@@ -1,4 +1,4 @@
-const fs = require("node:fs");
+const fs = require("fs");
 const path = require("path");
 const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../config.json")));
 const RBXException = require("./lib/error.js");

@@ -1,6 +1,6 @@
 const he = require("he");
 const path = require("path");
-const fs = require("node:fs");
+const fs = require("fs");
 const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../../config.json")));
 
 let RBX = require("../lib/obfuscated_rblx.js");
