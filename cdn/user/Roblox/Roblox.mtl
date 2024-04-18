@@ -1,0 +1,44 @@
+newmtl Player11Mtl
+Material Color
+Ka 0.639216 0.635294 0.647059
+Kd 0.639216 0.635294 0.647059
+Ks 0.055148 0.0548097 0.0558247 
+
+d 1
+
+Ns 0
+
+map_Ka Roblox_Tex1.png
+map_Kd Roblox_Tex1.png
+map_d Roblox_Tex1.png
+
+map_Ns Roblox_Tex2.png
+
+newmtl Handle1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Roblox_Tex3.png
+map_Kd Roblox_Tex3.png
+map_d Roblox_Tex3.png
+
+newmtl Player1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Roblox_Tex4.png
+map_Kd Roblox_Tex4.png
+map_d Roblox_Tex4.png
+

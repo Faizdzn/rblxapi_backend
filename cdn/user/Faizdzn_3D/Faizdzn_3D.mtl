@@ -1,0 +1,42 @@
+newmtl Player1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Faizdzn_3D_Tex1.png
+map_Kd Faizdzn_3D_Tex1.png
+map_d Faizdzn_3D_Tex1.png
+
+newmtl Handle2Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Faizdzn_3D_Tex2.png
+map_Kd Faizdzn_3D_Tex2.png
+map_d Faizdzn_3D_Tex2.png
+
+newmtl Handle1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Faizdzn_3D_Tex3.png
+map_Kd Faizdzn_3D_Tex3.png
+map_d Faizdzn_3D_Tex3.png
+
