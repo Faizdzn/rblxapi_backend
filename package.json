@@ -14,8 +14,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "he": "^1.2.0",
-    "jszip": "^3.10.1",
-    "yarn": "^1.22.22"
+    "jszip": "^3.10.1"
   },
   "devDependencies": {
     "axios": "^1.6.8"
