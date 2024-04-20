@@ -1,12 +1,13 @@
 const he = require("he");
 const path = require("path");
 const fs = require("fs");
-const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../config.json")));
+// const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../config.json"))).cdnDir;
+const config = process.env.CDNDIR;
 
 let RBX = require("../lib/obfuscated_rblx.js");
 const RBXException = require("../lib/error.js");
 
-RBX = new RBX(config.cdnDir)
+RBX = new RBX(config)
 
 class itemController {
   async getItem3D(req, res, next) {

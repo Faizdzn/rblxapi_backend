@@ -1,6 +1,9 @@
+require("dotenv").config()
+
 const fs = require("fs");
 const path = require("path");
-const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, "./config.json")));
+// const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, "./config.json")));
+const config = process.env;
 const RBXException = require("./lib/error.js");
 
 const express = require("express");
@@ -9,7 +12,7 @@ const app = express();
 
 app.set('json spaces', 2)
 app.use(cors({
-  "origin": config.apiOrigin
+  "origin": config.APIORIGIN
 }))
 
 app.use("/cdn", express.static("./cdn"))
@@ -38,6 +41,6 @@ app.use((err, req, res, next) => {
   }
 })
 
-app.listen(config.port, () => {
-  console.log(`${config.serverName} running in ${config.port}`)
+app.listen(config.PORT, () => {
+  console.log(`${config.SERVERNAME} running in ${config.PORT}`)
 })
