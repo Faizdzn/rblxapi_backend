@@ -3,6 +3,7 @@ const path = require("path");
 const fs = require("fs");
 // const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../config.json"))).cdnDir;
 const config = process.env.CDNDIR;
+let resp = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../lib/json/response.json"))).resp;
 
 let RBX = require("../lib/obfuscated_rblx.js");
 const RBXException = require("../lib/error.js");
@@ -39,7 +40,6 @@ class itemController {
       
       const detail = await RBX.itemDetail(itemId);
       
-      let resp = config.resp;
       resp['message'] = `Successfully catch ${itemId} asset detail!`;
       resp['data'] = detail;
       
