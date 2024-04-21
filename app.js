@@ -26,18 +26,19 @@ app.use((err, req, res, next) => {
   if(err.json != null) {
     res.status(err.json['error']['status']).json(err.json);
   } else {
-    const code = "E_SERVER"
-    const resp =
-    {
-      error: {
-        code: code,
-        message: config.error['code'][code][0],
-        status: config.error['code'][code][1]
-      }
-    };
+    // const code = "E_SERVER"
+    // const resp =
+    // {
+    //   error: {
+    //     code: code,
+    //     message: config.error['code'][code][0],
+    //     status: config.error['code'][code][1]
+    //   }
+    // };
     
-    console.error(err)
-    res.status(resp['status']).json(resp);
+    // console.error(err)
+    // res.status(resp['status']).json(resp);
+    throw new RBXException("E_SERVER");
   }
 })
 
