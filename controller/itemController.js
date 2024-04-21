@@ -5,7 +5,7 @@ const fs = require("fs");
 const config = process.env.CDNDIR;
 let resp = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../lib/json/response.json"))).resp;
 
-let RBX = require("../lib/obfuscated_rblx.js");
+let RBX = require("../lib/rblx.js");
 const RBXException = require("../lib/error.js");
 
 RBX = new RBX(config)
