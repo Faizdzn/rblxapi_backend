@@ -20,8 +20,10 @@ class groupController {
       }
       
       const groupDT = await RBX.getGroupDetail(gid);
+      resp['message'] = `Successfully catch ${gid} group detail!`;
+      resp['data'] = groupDT;
       
-      return res.json(groupDT)
+      return res.json(resp)
     } catch(err) {
       next(err);
     }

@@ -20,8 +20,10 @@ class gameController {
       }
       
       const gameDT = await RBX.getGameDetail(gid);
+      resp['message'] = `Successfully catch ${gid} game detail!`;
+      resp['data'] = gameDT;
       
-      return res.json(gameDT)
+      return res.json(resp)
     } catch(err) {
       next(err);
     }
