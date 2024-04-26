@@ -1,4 +1,3 @@
-const he = require("he");
 const path = require("path");
 const fs = require("fs");
 // const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../config.json"))).cdnDir;
@@ -19,7 +18,7 @@ class userController {
         throw new RBXException("E_FIELDEMPTY");
       }
       
-      const zipData = await RBX.zipUserObjtoBuffer(he.encode(username));
+      const zipData = await RBX.zipUserObjtoBuffer(username);
       
       res.setHeader('Content-Type', 'application/zip');
       res.setHeader('Content-Disposition', `attachment; filename=user_${he.encode(username)}.zip`);
@@ -38,7 +37,7 @@ class userController {
         throw new RBXException("E_FIELDEMPTY");
       }
       
-      const uid = await RBX.getUIDbyUsername(he.encode(username));
+      const uid = await RBX.getUIDbyUsername(username);
       const detail = await RBX.uidDetail(uid);
       
       resp['message'] = `Successfully catch ${username}'s detail!`;
