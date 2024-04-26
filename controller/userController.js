@@ -21,7 +21,7 @@ class userController {
       const zipData = await RBX.zipUserObjtoBuffer(username);
       
       res.setHeader('Content-Type', 'application/zip');
-      res.setHeader('Content-Disposition', `attachment; filename=user_${he.encode(username)}.zip`);
+      res.setHeader('Content-Disposition', `attachment; filename=user_${username}.zip`);
   
       res.send(zipData);
     } catch(err) {
