@@ -12,14 +12,14 @@ RBX = new RBX(config)
 
 class itemController {
   async getItem3D(req, res, next) {
-    const item_id = parseInt(req.query.i);
+    const item_id = req.query.i;
     
     try {
-      if(item_id == null || item_id == 0) {
+      if(item_id == null || item_id.length < 1) {
         throw new RBXException("E_FIELDEMPTY");
       }
       
-      const zipData = await RBX.zipItemObjtoBuffer(item_id);
+      const zipData = await RBX.zipItemObjtoBuffer(parseInt(item_id));
       
       res.setHeader('Content-Type', 'application/zip');
       res.setHeader('Content-Disposition', `attachment; filename=item_${item_id}.zip`);
@@ -31,14 +31,14 @@ class itemController {
   }
   
   async getItemDetail(req, res, next) {
-    const itemId = parseInt(req.query.i);
+    const itemId = req.query.i;
     
     try {
-      if(itemId == null || itemId == 0) {
+      if(itemId == null || itemId.length < 1) {
         throw new RBXException("E_FIELDEMPTY");
       }
       
-      const detail = await RBX.itemDetail(itemId);
+      const detail = await RBX.itemDetail(parseInt(itemId));
       
       resp['message'] = `Successfully catch ${itemId} asset detail!`;
       resp['data'] = detail;
