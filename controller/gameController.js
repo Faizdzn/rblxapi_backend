@@ -11,15 +11,15 @@ RBX = new RBX(config);
 
 class gameController {
   async getDetail(req, res, next) {
-    const gid = req.query.g;
+    const univ_id = req.query.u;
     
     try {
-      if(gid == null || gid.length < 1) {
+      if(univ_id == null || univ_id.length < 1) {
         throw new RBXException("E_FIELDEMPTY");
       }
       
-      const gameDT = await RBX.getGameDetail(gid);
-      resp['message'] = `Successfully catch ${gid} game detail!`;
+      const gameDT = await RBX.getGameDetail(univ_id);
+      resp['message'] = `Successfully catch ${univ_id} game detail!`;
       resp['data'] = gameDT;
       
       return res.json(resp)
