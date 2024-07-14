@@ -1,6 +1,6 @@
-# Roblox Character Downloader Website
+# Roblox API Backend
 
-Welcome developers. Make sure you followed this steps correctly for setup the website and run it to your own localhost:
+Welcome developers. Make sure you followed this steps correctly for setup the backend and run it to your own localhost:
 
 1. run `npm install`.
 2. make a copy of the `.env.example` also rename it to `.env`. After that, you can edit the configuration fields (edit the port, edit the cors origin, edit the cdn directory position, etc).
